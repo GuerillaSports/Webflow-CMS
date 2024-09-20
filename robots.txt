@@ -1,3 +1,7 @@
+# NOTE: Do not edit this sitemap here!
+# Please manage this sitemap here: https://github.com/GuerillaSports/Webflow-CMS
+# Then copy and paste the updated sitemap below.
+
 # A robots.txt file tells bots where it can and cannot look to index the site.
 # Allow all user agents full access
 User-agent: *
