@@ -1,0 +1,12 @@
+<script>
+/**
+  * If no sub-featured articles exist, hide the "Top Stories" header from the page
+  */
+document.addEventListener("DOMContentLoaded", function() {
+  const hasItems = !!document.querySelector(".cl-top-articles-list");
+  const header = document.querySelector(".articles__top-stories--header");
+  if (!hasItems) {
+    header.style.display = "none"; 
+  };
+});
+</script>
