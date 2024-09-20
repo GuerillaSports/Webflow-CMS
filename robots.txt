@@ -1,0 +1,22 @@
+# A robots.txt file tells bots where it can and cannot look to index the site.
+# Allow all user agents full access
+User-agent: *
+Disallow:
+
+# Disallow access to specific pages via globbing patterns
+Disallow: /contact # no reason to index contact page
+# Architectural collections (like Podcast: Guerilla Football Denver) do not have landing pages (links to blank page)
+# The following blocklist prevent indexing these blank pages via glob patterns ( * )
+Disallow: /podcasts/* 
+Disallow: /opponent-teams/*  # likely will never change
+Disallow: /home-teams/* # Once GS decides to move forward with team landing pages, they will live here!
+Disallow: /authors/*  # May change in the future...
+Disallow: /story-types/*
+Disallow: /media/*
+
+
+# Block access to URLs containing query parameters to avoid duplicate content
+Disallow: /*?*
+#
+# Sitemap location
+Sitemap: https://www.guerillasports.net/sitemap.xml
