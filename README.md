@@ -4,13 +4,12 @@ This repository stores necessary pages, files, and code required by the Guerilla
 
 ## CDN Delivery System
 
-To improve the way in which custom code is embeded into webiste, the `./cdn` directory contains the global and page-scoped `/.js` which need to be embedded into the various pages on the website. Should new pages be added to the site, a file should be added to the `cdn` directory with the name of the new page, like so `<new-page-name>.js`.
-Once added, the `cdn` link should be added to the `Custom Code` block in the page's settings in webflow. This code should be added like so:
+To improve the way in which custom code is embedded into the webflow website, the `./cdn` directory contains the global cdn embeded into the head of **all** pages. This file handles imports for all pages. If a page only needs access to global functions, it has access to all functions. Should a page need access to scoped functions, such as the `articles` page, that file will be dynamically imported and fetched.
+
+### Global CDN Script belongs in `head` tag
 
 ```html
 <!-- Guerilla Sports Custom Code -->
   <!-- Global -->
-  <script defer src="https://cdn.jsdelivr.net/gh/GuerillaSports/Webflow-CMS/cdn/all.js"></script>
-  <!-- Page Specific -->
-  <script defer src="https://cdn.jsdelivr.net/gh/GuerillaSports/Webflow-CMS/cdn/<new-page-name>.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/gh/GuerillaSports/Webflow-CMS@main/cdn/index.js"></script>
 ```
