@@ -11,13 +11,20 @@ function manageColorContrasts() {
   }
 };
 
-const globalFunctions = {
-  manageColorContrasts
-}
-
-
-document.addEventListener("DOMContentLoaded", function () {
-  for (let key in globalFunctions) {
-    globalFunctions[key]()
+/**
+ * Webflow cms list content is lazy loaded.
+ * This requires us to use a mutation observer to watch for lazy-loaded content.
+ * When the content changes, the contrast function is re-run.
+ */
+const dynamic_lists = document.querySelector(".dynam-list")
+const config = { childList: true, subtree: true }
+const story_title_observer = new MutationObserver((mutList) => {
+  for (let mut of mutList) {
+    // check if element has been added
+    if (mut.addedNodes.length) {
+      manageColorContrasts()
+    }
   }
 })
+
+story_title_observer.observe(dynamic_lists, config)
