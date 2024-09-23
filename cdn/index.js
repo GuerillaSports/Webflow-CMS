@@ -12,14 +12,9 @@ function manageColorContrasts() {
 };
 
 
-const globalFunctions = {
-  manageColorContrasts
-}
-
-window.globalFunctions = globalFunctions
 
 document.addEventListener("DOMContentLoaded", function () {
-  for (let key of window.globalFunctions) {
-    window.globalFunctions[key]()
+  for (let key of globalFunctions) {
+    globalFunctions[key]()
   }
 })
