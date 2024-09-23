@@ -1,6 +1,4 @@
-<script>
 document.addEventListener("DOMContentLoaded", function() {
-
   /**
   * If no sub-featured articles exist, hide the "Top Stories" header from the page
   */
@@ -15,4 +13,3 @@ document.addEventListener("DOMContentLoaded", function() {
   // All Function Calls
   checkSubFeaturedHeader();
 });
-</script>
