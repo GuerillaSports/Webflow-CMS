@@ -27,4 +27,4 @@ const story_title_observer = new MutationObserver((mutList) => {
   }
 })
 
-story_title_observer.observe(dynamic_lists,)
+story_title_observer.observe(dynamic_lists, config)
