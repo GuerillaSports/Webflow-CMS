@@ -45,6 +45,8 @@
   - This is a global script, so it executes on every page (meaning an article will have access to this in case the `related-content` requires it), however, there is no `.dynam-list` on an article's page, so it only runs once.
 - Removed static content like "A Fresh Take on Denver Sports" from `stories` and `contact`
 - Fixed the Subscribe form to submit to GS's webflow contacts.
+- Custom Story titles
+  - Leveraging the **CDNFlow** system, custom scripts now detect if a story is using a custom story title, and, if so, the script alters the thumbnail to format the custom story title to look exactly as the pre-built story titles do.
 
 #### Stories Page Updates
 
