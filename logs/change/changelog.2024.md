@@ -67,3 +67,13 @@
 #### CMS Documentation
 
 - The Guerilla-Sports webiste documentation now lives in this repo's `wiki`. These docs explain the entirety of the CMS system, what each and every field does and how they effect the content served to users. It even adds some content on how to design readable articles and such.
+
+#### October 2024
+##### SEO Updates
+- Added `robots.txt` to GS Webflow
+- Added automatic sitemap indexing to GS Webflow system
+- Improved SEO page descriptions, titles, and keywords to MFGStudios
+  - Improved on-page content to include SEO keywords
+
+##### GS CDNFlow System
+- Improved Custom story titles, with dynamic team colors and fallback to GS Blue
