@@ -1,10 +1,8 @@
 # Change Log
 
-### Guerilla Sports Webflow CMS
+## September 2024
 
-#### September 2024
-
-##### Logo/Branding Updates
+### Logo/Branding Updates
 
 - Updated logos on the following places:
   - Header instance
@@ -16,7 +14,7 @@
 - Issues:
   - Without brand guidelines, I am unsure that all of the manipulation I had to do is consistent with the brand.
 
-##### Global Site Updates
+### Global Site Updates
 
 - CDN System: [GS CDNFlow]()
   - Developed a CDN delivery system for the gs website which contains all of the custom code used across the site.
@@ -50,32 +48,43 @@
 - Custom Story titles
   - Leveraging the **CDNFlow** system, custom scripts now detect if a story is using a custom story title, and, if so, the script alters the thumbnail to format the custom story title to look exactly as the pre-built story titles do.
 
-##### Stories Page Updates
+### Stories Page Updates
 
 - New Story Type: `Liv's Picks`
   - Still think we need to brainstorm some more generic story types, but I added `Liv's Picks` as it seems consistent with the branding, and wording of specific articles.
 - Altered filtration system
   - as discussed, I altered the filtration from story type to team. Now users can filter content to their team, rather than by story type. This should likely be dynamic and pull from the collection of home teams, but GS is scaling quickly, so we might need to rethink this.
 
-##### Articles Page Updates
+### Articles Page Updates
 
 - Custom SubFeatured Header Script
   - leverages the CDNFlow system
   - Likely now will never be used as there are enough articles to where this would only happen if GS deleted nearly all
   - This script checks the sub-featured list for content, and if not, removes the header from the page. There is no way to reference a collection outside of that collection in webflow, so this has to be a custom script.
 
-##### Podcasts Page Updates
+### Podcasts Page Updates
 
-##### CMS Documentation
+### CMS Documentation
 
 - The Guerilla-Sports webiste documentation now lives in this repo's `wiki`. These docs explain the entirety of the CMS system, what each and every field does and how they effect the content served to users. It even adds some content on how to design readable articles and such.
 
-#### October 2024
-##### SEO Updates
+## October 2024
+### SEO Updates
 - Added `robots.txt` to GS Webflow
 - Added automatic sitemap indexing to GS Webflow system
 - Improved SEO page descriptions, titles, and keywords to MFGStudios
   - Improved on-page content to include SEO keywords
 
-##### GS CDNFlow System
+### GS CDNFlow System
 - Improved Custom story titles, with dynamic team colors and fallback to GS Blue
+
+## November 2024
+### General Updates
+- Migrated mobile nav from upper hamburger menu to lower mobile navigation bar
+  - Custom code for this feature (to switch icons to filled vs outlined for current page is in `gs-cdnflow/global`
+- Altered mobile card from side-by-side description and image to larger image with description (inspired by `thescore`)
+- With `Home` page addition, articles are now called `stories` and what was previously a `story` is now a video.
+### Home Page
+- Added a dedicated homepage which aggregates all content into an organized list.
+  - These features require a decent bit of custom code. These specific features can be found in `gs-cdnflow/home`
+- Added icons to each content-type to make this content more readable (i.e. newspaper for articles, mic for podcast, play button for videos)
