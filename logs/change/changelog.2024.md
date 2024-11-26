@@ -69,22 +69,48 @@
 - The Guerilla-Sports webiste documentation now lives in this repo's `wiki`. These docs explain the entirety of the CMS system, what each and every field does and how they effect the content served to users. It even adds some content on how to design readable articles and such.
 
 ## October 2024
+
 ### SEO Updates
+
 - Added `robots.txt` to GS Webflow
 - Added automatic sitemap indexing to GS Webflow system
 - Improved SEO page descriptions, titles, and keywords to MFGStudios
   - Improved on-page content to include SEO keywords
 
 ### GS CDNFlow System
+
 - Improved Custom story titles, with dynamic team colors and fallback to GS Blue
 
 ## November 2024
+
 ### General Updates
+
 - Migrated mobile nav from upper hamburger menu to lower mobile navigation bar
   - Custom code for this feature (to switch icons to filled vs outlined for current page is in `gs-cdnflow/global`
 - Altered mobile card from side-by-side description and image to larger image with description (inspired by `thescore`)
 - With `Home` page addition, articles are now called `stories` and what was previously a `story` is now a video.
-### Home Page
-- Added a dedicated homepage which aggregates all content into an organized list.
-  - These features require a decent bit of custom code. These specific features can be found in `gs-cdnflow/home`
-- Added icons to each content-type to make this content more readable (i.e. newspaper for articles, mic for podcast, play button for videos)
+
+### Shopify
+
+- Customized the shopify store (working)
+- Basic setup and preparation for launch
+
+### webflow
+
+- Integrated new Mobile Nav bar
+- Improved the layout and look of the mobile experience
+  - Removed side-by-side overview for cards and folded it all into a single width view
+- New Home page
+  - Leverages `GS-CDNFlow` system to aggreagate all content into a single view for the homepage experience
+- Rename and restyle other pages (stories -> videos, articles -> stories, ...)
+- Lots of research and hi-level planning for potential custom site build (how to integrate twitter and youtube feed, other improvements, subscriptions, how to leverage vertical video content, ...)
+
+### GS CDNFlow System
+
+- Custom story titles:
+  - Algorithm now splits the title in half with a left bias for better formatting of longer titles
+- Homepage aggregation
+  - In the webflow editor, all content is placed on the page, then these functions grab that content, filter it, aggregate it all into one list, and sorts it by release date.
+  - For more details, see [homepage aggregation](https://github.com/GuerillaSports/CDNFlow?tab=readme-ov-file#aggregate-homepage-content)
+- Mobile nav bar:
+  - webflow does not allow formatting conditionally based on the path, so this feature will swap in an icon's filled variant should it be the current path.
